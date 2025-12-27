@@ -373,7 +373,7 @@ function App() {
         console.log("Analysis stopped by user.");
       } else {
         console.error("Critical Error:", error);
-        addMessage("bot", `❌ 錯誤: ${(error as Error).message}`);
+        addMessage("bot", `錯誤: ${(error as Error).message}`);
       }
       if (appState !== "DONE") setAppState("READY");
     } finally {
@@ -508,7 +508,7 @@ function App() {
               <SlashIcon className="w-5 h-5" />
             </div>
             <h1 className="font-bold text-lg tracking-tight text-slate-700">
-              DISE AI <span className="text-indigo-600">Assistant</span>
+              DISE AI <span className="text-indigo-600">Agent</span>
             </h1>
           </div>
 

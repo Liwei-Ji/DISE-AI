@@ -268,7 +268,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
                 </div>
               </div>
               <p className="text-[10px] text-slate-400 mt-3 text-center italic">
-                * 點擊上方圖片可進入手動標註模式修正錨點
+                * 點擊圖片進入手動標註模式修正錨點
               </p>
             </div>
           )}
@@ -276,7 +276,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
 
         {/* Timestamp */}
         <span className="text-[10px] text-slate-300 mt-1 px-1">
-          {isUser ? "You" : "AI Assistant"} •{" "}
+          {isUser ? "You" : "AI Agent"} •{" "}
           {message.timestamp
             ? formatMessageTime(message.timestamp)
             : "Just now"}
