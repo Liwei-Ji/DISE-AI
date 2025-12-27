@@ -1,0 +1,5 @@
+{
+  "name": "DISE AI",
+  "description": "A conversational interface for analyzing sleep video data, featuring automated obstruction detection and interactive annotation tools.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,43 @@
+{
+  "name": "react-typescript",
+  "homepage": "https://liwei-ji.github.io/DISE-AI/",
+  "version": "1.0.0",
+  "description": "React and TypeScript example starter project",
+  "keywords": [
+    "typescript",
+    "react",
+    "starter"
+  ],
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@tensorflow/tfjs": "4.22.0",
+    "@tensorflow/tfjs-backend-cpu": "4.22.0",
+    "gh-pages": "6.3.0",
+    "lucide-react": "0.561.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "10.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.38",
+    "@types/react-dom": "18.2.15",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "5.3.3",
+    "vite": "^5.0.11"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

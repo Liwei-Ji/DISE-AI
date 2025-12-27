@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "useDefineForClassFields": true,
+      "lib": ["ES2020", "DOM", "DOM.Iterable"],
+      "module": "ESNext",
+      
+      /* 🔥 關鍵設定 1：忽略第三方套件的錯誤 */
+      "skipLibCheck": true,
+      
+      "moduleResolution": "bundler",
+      "allowImportingTsExtensions": true,
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "jsx": "react-jsx",
+  
+      /* Strict Type-Checking Options */
+      "strict": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "noFallthroughCasesInSwitch": true,
+      
+      /* 🔥 關鍵設定 2：解決 Set 迴圈報錯 */
+      "downlevelIteration": true
+    },
+    "include": ["src"]
+  }
