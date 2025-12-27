@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { User } from "lucide-react";
+import { FileChartColumn } from "lucide-react";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { ChatMessage } from "../types";
 
@@ -170,43 +171,45 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
         >
           {message.type === "text" && (
             <ReactMarkdown
-            components={{
-              // 針對 Tailwind CSS 修正列表樣式 (因為 Tailwind 會預設移除 list-style)
-              ol: ({ node, ...props }) => (
-                <ol className="list-decimal pl-5 my-2 space-y-1" {...props} />
-              ),
-              ul: ({ node, ...props }) => (
-                <ul className="list-disc pl-5 my-2 space-y-1" {...props} />
-              ),
-              li: ({ node, ...props }) => <li className="pl-1" {...props} />,
-              
-              // 設定粗體樣式 (讓 Bot 的粗體字變成深藍色，User 的變成黃色)
-              strong: ({ node, ...props }) => (
-                <strong
-                  className={`font-bold ${
-                    isUser ? "text-yellow-300" : "text-indigo-700"
-                  }`}
-                  {...props}
-                />
-              ),
-              
-              // 設定段落間距
-              p: ({ node, ...props }) => <p className="mb-2 last:mb-0" {...props} />,
-              
-              // 設定連結樣式
-              a: ({ node, ...props }) => (
-                <a className="underline hover:text-indigo-400" {...props} />
-              ),
-            }}
-          >
-            {message.content}
-          </ReactMarkdown>
-        )}
+              components={{
+                // 修正列表樣式
+                ol: ({ node, ...props }) => (
+                  <ol className="list-decimal pl-5 my-2 space-y-1" {...props} />
+                ),
+                ul: ({ node, ...props }) => (
+                  <ul className="list-disc pl-5 my-2 space-y-1" {...props} />
+                ),
+                li: ({ node, ...props }) => <li className="pl-1" {...props} />,
+
+                // 設定粗體樣式 (讓 Bot 的粗體字變成深藍色，User 的變成黃色)
+                strong: ({ node, ...props }) => (
+                  <strong
+                    className={`font-bold ${
+                      isUser ? "text-yellow-300" : "text-indigo-700"
+                    }`}
+                    {...props}
+                  />
+                ),
+
+                // 設定段落間距
+                p: ({ node, ...props }) => (
+                  <p className="mb-2 last:mb-0" {...props} />
+                ),
+
+                // 設定連結樣式
+                a: ({ node, ...props }) => (
+                  <a className="underline hover:text-indigo-400" {...props} />
+                ),
+              }}
+            >
+              {message.content}
+            </ReactMarkdown>
+          )}
 
           {message.type === "analysis_result" && message.data && (
             <div className="w-full min-w-[300px] sm:min-w-[500px] mt-2">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-slate-100">
-                <span className="text-lg">📊</span>
+                <FileChartColumn className="w-5 h-5 text-blue-600" />
                 <span className="font-bold text-slate-800">分析報告</span>
               </div>
 

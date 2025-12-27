@@ -635,7 +635,7 @@ function App() {
             {isLoading || appState === "ANALYZING" ? (
               <button
                 onClick={handleStopAnalysis}
-                className="p-2 rounded-full transition-all bg-slate-900 text-white shadow-md hover:bg-slate-700 active:scale-95"
+                className="p-2 rounded-full transition-all bg-slate-100 text-slate-600 shadow-md hover:bg-slate-200 active:scale-95"
                 title="停止分析"
               >
                 <Square size={18} fill="currentColor" />
